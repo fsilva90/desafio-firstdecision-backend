@@ -1,8 +1,9 @@
-package com.testetecnicoattornatus.configuration;
+package com.desafio.firstdecision.configuration;
 
-import com.testetecnicoattornatus.exception.EnderecoInexistenteException;
-import com.testetecnicoattornatus.exception.PessoaInexistenteException;
-import com.testetecnicoattornatus.dto.error.MensagemErro;
+
+import com.desafio.firstdecision.dto.error.MensagemErro;
+import com.desafio.firstdecision.exception.SenhaException;
+import com.desafio.firstdecision.exception.UsuarioInexistenteException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -26,13 +27,13 @@ public class ExceptionResponseHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(new MensagemErro(ex.getMessage()),HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler(PessoaInexistenteException.class)
-    public ResponseEntity<MensagemErro> handlePessoaInexistente(PessoaInexistenteException ex) {
+    @ExceptionHandler(UsuarioInexistenteException.class)
+    public ResponseEntity<MensagemErro> handleUsuarioInexistente(UsuarioInexistenteException ex) {
         return new ResponseEntity<>(new MensagemErro(ex.getMessage()), HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(EnderecoInexistenteException.class)
-    public ResponseEntity<MensagemErro> handleEnderecoInexistente(EnderecoInexistenteException ex) {
-        return new ResponseEntity<>(new MensagemErro(ex.getMessage()), HttpStatus.NOT_FOUND);
+    @ExceptionHandler(SenhaException.class)
+    public ResponseEntity<MensagemErro> handleUsuarioSenhaErro(SenhaException ex) {
+        return new ResponseEntity<>(new MensagemErro(ex.getMessage()), HttpStatus.BAD_REQUEST);
     }
 }

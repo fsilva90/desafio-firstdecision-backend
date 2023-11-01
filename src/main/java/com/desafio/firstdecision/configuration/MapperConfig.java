@@ -1,4 +1,4 @@
-package com.testetecnicoattornatus.configuration;
+package com.desafio.firstdecision.configuration;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

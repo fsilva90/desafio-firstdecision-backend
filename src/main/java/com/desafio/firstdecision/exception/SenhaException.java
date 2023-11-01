@@ -4,9 +4,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class UsuarioInexistenteException extends RuntimeException {
+public class SenhaException extends RuntimeException {
 
-    public UsuarioInexistenteException(String message) {
+    public SenhaException(String message) {
         super(message);
     }
 }

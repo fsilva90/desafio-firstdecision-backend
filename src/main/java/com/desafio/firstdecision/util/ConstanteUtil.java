@@ -1,10 +1,9 @@
-package com.testetecnicoattornatus.util;
+package com.desafio.firstdecision.util;
 
 public final class ConstanteUtil {
 
-    public static final String MENSAGEM_PESSOA_INEXISTENTE = "Pessoa id %s não existe.";
-    public static final String MENSAGEM_ENDERECO_INEXISTENTE = "Nenhum endereço encontrado para a pessoa %s .";
-    public static final String MENSAGEM_ENDERECO_PRINCIPAL_INEXISTENTE = "Não existe endereço principal para pessoa id %s.";
+    public static final String MENSAGEM_USUARIO_INEXISTENTE = "Usuário id %s não existe.";
+    public static final String MENSAGEM_SENHA_ERRO = "Senha não corresponde com a confirmação de senha.";
 
     private ConstanteUtil() {
     }
